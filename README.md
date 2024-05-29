@@ -9,6 +9,16 @@ A teszteset célja hogy a felhasználó letölti a Budapest13 Smart City alkalma
 - Internetkapcsolat
 - Google fiók
 - Android operációs rendszerrel rendelkező telefon
+## Teszt követelmények
+- JAVA - Magasszintű programnyelv, amiben íródott a teszt
+- IntelliJ IDEA - A környezet ahol a teszt íródott
+- Maven - Tool, ami a különböző dependenciák futtatásáért felelős
+- Selenium v4.21.0 - Teszteléshez szükséges metódusok
+- Appium v9.2.2. - Mobil teszteléshez szükséges metódusok könyvtára
+- TestNG v7.10.2 - A tesztesetek futtatását teszi lehetővé
+- Android Studio - Program, ahol egy android mobil környezete szimulálható
+- Appium Server GUI - Program, ami virtális kapcsolatot teremt az IDEA és a szimulált telefon között
+- Appium Inspector - Program, amivel megkereshetőek az element-ek
 ## Teszt lépések
 1. Megnyitom a Google Play Store-t
 2. Rákeresek a "Budapest13 Smart City" alkalmazásra
