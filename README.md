@@ -7,18 +7,19 @@ Budapest13 Smart City alkalmazás letöltése és regisztrálás
 A teszteset célja hogy a felhasználó letölti a Budapest13 Smart City alkalmazást a Google Play Store-on keresztül, telepíti, regisztrálja magát, majd egy visszaigazoló e-mail-ben ezt megerősíti.
 ## Előfeltétel
 - Internetkapcsolat
-- Google fiók
+- Google fiók (elekm496@gmail.com/Qwer_1234)
 - Android operációs rendszerrel rendelkező telefon
 ## Teszt követelmények
-- JAVA - Magasszintű programnyelv, amiben íródott a teszt
-- IntelliJ IDEA - A környezet ahol a teszt íródott
-- Maven - Tool, ami a különböző dependenciák futtatásáért felelős
-- Selenium v4.21.0 - Teszteléshez szükséges metódusok
-- Appium v9.2.2. - Mobil teszteléshez szükséges metódusok könyvtára
+- Selenium v4.21.0 (Jelenlegi verzió) - Teszteléshez szükséges metódusok
+- Appium v9.2.2. (Jelenlegi verzió) - Mobil teszteléshez szükséges metódusok könyvtára
 - TestNG v7.10.2 - A tesztesetek futtatását teszi lehetővé
-- Android Studio - Program, ahol egy android mobil környezete szimulálható
-- Appium Server GUI - Program, ami virtális kapcsolatot teremt az IDEA és a szimulált telefon között
-- Appium Inspector - Program, amivel megkereshetőek az element-ek
+### Futtatási sorrend:
+1. Android Studio - Telepíteni, majd létrehozni egy projectet empty deafult beállítással,
+2. Tools -> Device Manager, majd "+" jelre rányomva "Add a new device"
+3. Telefon típusa: Pixel 7 (ez képes a google play store-ra), majd Next, verziószám: Android 14.0 verziószámra rányomunk, majd rányomunk a mellette lévő letöltés ikonra és a program ezután letölti ezt, majd Next. A device neve ez kell legyen: "Pixel_PlayStore_Test" majd a végén Finish
+4. Amint létrejött a device, ennek a jobb szélén lesz egy Start gomb, amire rányomunk és elindul a telefon szimuláció
+5. Appium Server GUI - Telepíteni, majd megadjuk a következőket: (host: 127.0.0.1, Port: 4723), ezután startServer
+6. Ha minden fut, akkor a teszt projectet elindítjuk az IDEA-ban és futtathatjuk a tesztet.
 ## Teszt lépések
 1. Megnyitom a Google Play Store-t
 2. Rákeresek a "Budapest13 Smart City" alkalmazásra

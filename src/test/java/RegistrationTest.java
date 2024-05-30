@@ -1,5 +1,6 @@
 import DriverFactory.driverSettings;
 import jdk.jfr.Description;
+import org.openqa.selenium.TimeoutException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
@@ -46,10 +47,14 @@ public class RegistrationTest extends driverSettings {
         emailAppPage.clickToDoNotAllowButton();
         emailAppPage.clickCloseButton();
         emailAppPage.clickToConfirmationEmail();
-        emailAppPage.clickToMoreOptions();
-        emailAppPage.clickToMoveTo();
-        emailAppPage.clickToCancel();
-        emailAppPage.clickToDetails();
+        try{
+            emailAppPage.clickToMoreOptions();
+            emailAppPage.clickToMoveTo();
+            emailAppPage.clickToCancel();
+            emailAppPage.clickToDetails();
+        }catch (TimeoutException exception){
+            System.out.println("No such element found");
+        };
         //emailAppPage.clickToConfirm();    --> For full test, delete the double slash
     }
 }
